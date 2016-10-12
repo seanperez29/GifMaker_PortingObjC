@@ -61,6 +61,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		91902A3E1DAC4171004D2EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91902A3A1DAC3FBE004D2EB4 /* UIViewController+Record.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A94CC3D61D21C84C00DC758E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +108,12 @@
 		EDFAA8EB1CDA99A500D2CB08 /* GifMaker_Swift_Template */ = {
 			isa = PBXGroup;
 			children = (
+				91902A3E1DAC4171004D2EB4 /* View */,
 				91902A331DAC3F54004D2EB4 /* Controllers */,
 				EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */,
 				A94CC3D71D21C85A00DC758E /* Assets */,
 				A94CC3D61D21C84C00DC758E /* Supporting Files */,
 				EDFAA9221CDA9C4700D2CB08 /* Regift Files */,
-				91902A3A1DAC3FBE004D2EB4 /* UIViewController+Record.swift */,
 			);
 			path = GifMaker_Swift_Template;
 			sourceTree = "<group>";

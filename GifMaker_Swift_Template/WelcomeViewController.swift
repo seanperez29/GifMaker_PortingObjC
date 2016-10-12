@@ -9,6 +9,8 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    @IBOutlet weak var gifImgeView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
