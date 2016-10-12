@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var gifImgeView: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let proofOfConceptGif = UIImage.gifWithName("hotlineBling")
+        gifImgeView.image = proofOfConceptGif
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
