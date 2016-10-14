@@ -34,13 +34,13 @@ private struct Group {
 ///
 /// Synchronous Usage:
 ///
-///      let regift = Regift(sourceFileURL: movieFileURL, frameCount: 24, delayTime: 0.5, loopCount: 7)
-///      print(regift.createGif())
-///
-///      // OR
-///
-///      let trimmedRegift = Regift(sourceFileURL: movieFileURL, startTime: 30, duration: 15, frameRate: 15)
-///      print(trimmedRegift.createGif())
+    //let regift = Regift(sourceFileURL: movieFileURL, frameCount: 24, delayTime: 0.5, loopCount: 7)
+    //print(regift.createGif())
+
+    // OR
+
+    //let trimmedRegift = Regift(sourceFileURL: movieFileURL, startTime: 30, duration: 15, frameRate: 15)
+    //print(trimmedRegift.createGif())
 ///
 /// Asynchronous Usage:
 ///

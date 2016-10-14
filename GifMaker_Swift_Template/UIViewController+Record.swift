@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import MobileCoreServices
 
+let frameCount = 16
+let delayCount: Float = 0.2
+let loopCount = 0
+
 extension UIViewController {
     
     @IBAction func launchVideoCamera() {
@@ -18,7 +22,6 @@ extension UIViewController {
         recordVideoController.mediaTypes = [kUTTypeMovie as String]
         recordVideoController.allowsEditing = false
         recordVideoController.delegate = self
-        
         present(recordVideoController, animated: true, completion: nil)
     }
 }
@@ -31,12 +34,25 @@ extension UIViewController: UIImagePickerControllerDelegate {
         let mediaType = info[UIImagePickerControllerMediaType] as! String
         if mediaType == kUTTypeMovie as String {
             let videoURL = info[UIImagePickerControllerMediaURL] as! URL
-            UISaveVideoAtPathToSavedPhotosAlbum(videoURL.path, nil, nil, nil)
+            convertVideoToGIF(videoURL: videoURL)
+            //UISaveVideoAtPathToSavedPhotosAlbum(videoURL.path, nil, nil, nil)
             dismiss(animated: true, completion: nil)
         }
     }
     
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func convertVideoToGIF(videoURL: URL) {
+        let regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayCount, loopCount: loopCount)
+        let gifURL = regift.createGif()
+        displayGif(url: gifURL!)
+    }
+    
+    func displayGif(url: URL) {
+        let gifEditorVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as! GifEditorViewController
+        gifEditorVC.gifURL = url
+        navigationController?.pushViewController(gifEditorVC, animated: true)
     }
 }
