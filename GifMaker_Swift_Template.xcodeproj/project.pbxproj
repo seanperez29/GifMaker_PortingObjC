@@ -11,6 +11,7 @@
 		91902A371DAC3F7B004D2EB4 /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91902A361DAC3F7B004D2EB4 /* GifEditorViewController.swift */; };
 		91902A391DAC3F8A004D2EB4 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91902A381DAC3F8A004D2EB4 /* PreviewViewController.swift */; };
 		91902A3B1DAC3FBE004D2EB4 /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91902A3A1DAC3FBE004D2EB4 /* UIViewController+Record.swift */; };
+		91F7A3A81DB32AF90085246C /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7A3A71DB32AF90085246C /* Gif.swift */; };
 		A93B3B081D2D3F7900BE1662 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B041D2D3F7900BE1662 /* LaunchScreen.xib */; };
 		A93B3B091D2D3F7900BE1662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B061D2D3F7900BE1662 /* Main.storyboard */; };
 		EC8363C189C02BB72B7F74E3 /* Pods_GifMaker_Swift_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9708CCFE9A269B89EF94FB /* Pods_GifMaker_Swift_Template.framework */; };
@@ -29,6 +30,7 @@
 		91902A361DAC3F7B004D2EB4 /* GifEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
 		91902A381DAC3F8A004D2EB4 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		91902A3A1DAC3FBE004D2EB4 /* UIViewController+Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
+		91F7A3A71DB32AF90085246C /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		A93B3B051D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A93B3B071D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE8A18D406BEF62B6C18770F /* Pods-GifMaker_Swift_Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifMaker_Swift_Template.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GifMaker_Swift_Template/Pods-GifMaker_Swift_Template.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				A94CC3D71D21C85A00DC758E /* Assets */,
 				A94CC3D61D21C84C00DC758E /* Supporting Files */,
 				EDFAA9221CDA9C4700D2CB08 /* Regift Files */,
+				91F7A3A71DB32AF90085246C /* Gif.swift */,
 			);
 			path = GifMaker_Swift_Template;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
 				EDFAA91F1CDA9C3100D2CB08 /* AVAssetImageGeneratorTimePoints.swift in Sources */,
 				91902A3B1DAC3FBE004D2EB4 /* UIViewController+Record.swift in Sources */,
+				91F7A3A81DB32AF90085246C /* Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
