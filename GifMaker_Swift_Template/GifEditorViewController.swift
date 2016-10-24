@@ -9,7 +9,6 @@
 import UIKit
 
 class GifEditorViewController: UIViewController {
-    
     @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var captionTextField: UITextField!
     var gif: Gif?
@@ -31,8 +30,14 @@ class GifEditorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    func presentPreview() {
+        let previewVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as! GifEditorViewController
+        let regift = Regift(sourceFileURL: (gif?.videoURL)!, frameCount: frameCount, delayTime: delayCount, loopCount: loopCount)
+        let captionFont = captionTextField.font
+        let gifURL = regift.createGif(caption: captionTextField.text, font: captionFont)
+        let newGif = Gif(url: gifURL!, videoURL: (gif?.videoURL)!, caption: captionTextField.text)
+        previewVC.gif = newGif
+    }
 
     /*
     // MARK: - Navigation

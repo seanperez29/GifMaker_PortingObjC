@@ -9,6 +9,8 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
+    
+    var gif: Gif?
 
     override func viewDidLoad() {
         super.viewDidLoad()
