@@ -31,12 +31,16 @@ class GifEditorViewController: UIViewController {
     }
     
     func presentPreview() {
+        guard let gif = gif else {
+            return
+        }
         let previewVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as! GifEditorViewController
-        let regift = Regift(sourceFileURL: (gif?.videoURL)!, frameCount: frameCount, delayTime: delayCount, loopCount: loopCount)
+        let regift = Regift(sourceFileURL: gif.videoURL, frameCount: frameCount, delayTime: delayCount, loopCount: loopCount)
         let captionFont = captionTextField.font
         let gifURL = regift.createGif(caption: captionTextField.text, font: captionFont)
-        let newGif = Gif(url: gifURL!, videoURL: (gif?.videoURL)!, caption: captionTextField.text)
+        let newGif = Gif(url: gifURL!, videoURL: gif.videoURL, caption: captionTextField.text)
         previewVC.gif = newGif
+        navigationController?.pushViewController(previewVC, animated: true)
     }
 
     /*
