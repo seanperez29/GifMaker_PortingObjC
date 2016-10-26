@@ -17,6 +17,21 @@ class PreviewViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func shareGif(sender: AnyObject) {
+        let url: URL = (self.gif?.url)!
+        let animatedGif = NSData(contentsOf: url)
+        let itemsToShare = [animatedGif]
+        
+        let activityVC = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+        
+        activityVC.completionWithItemsHandler = {(activity, completed, items, error) in
+            if completed {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        navigationController?.present(activityVC, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
